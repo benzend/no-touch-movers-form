@@ -235,3 +235,25 @@ label {
     left: 0;
   }
 }
+
+@media (max-width: 400px) {
+  body {
+    text-align: center;
+  }
+  .flex-container {
+    flex-direction: column;
+    margin-bottom: -30px;
+  }
+  .flex-container > div {
+    width: 100%;
+  }
+  #move-location-container input,
+  #explain-container input,
+  input,
+  textarea {
+    width: 100%;
+  }
+  form {
+    margin: 0;
+  }
+}
