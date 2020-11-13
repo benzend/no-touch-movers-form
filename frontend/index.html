@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="rl-margin">
+      <header class="txt-center">
+        <h1>No Touch Movers</h1>
+        <p>How do we get any work done?</p>
+      </header>
+      <form action="addInfo" method="POST">
+        <h2 class="txt-center">Contact Form</h2>
+        <div id="firstname_lastname-container" class="flex-container">
+          <div class="firstname">
+            <label for="firstname">First Name:</label>
+            <br />
+            <input required type="text" name="firstname" />
+          </div>
+          <div class="lastname">
+            <label for="lastname">Last Name:</label>
+            <br />
+            <input required type="text" name="lastname" />
+          </div>
+
+          <br />
+        </div>
+        <div id="email-container">
+          <label for="email">Email Address:</label>
+          <br />
+          <input type="email" name="email" id="email" />
+        </div>
+        <div id="tel-container">
+          <label for="tel">Phone Number:</label>
+          <br />
+          <input type="tel" name="tel" id="tel" />
+        </div>
+        <div id="home-squareft-container">
+          <label for="homeSquareFt"
+            >What is the current square footage of the house you're living in
+            now?
+          </label>
+          <br />
+          <input required type="number" name="homeSquareFt" placeholder="200" />
+          <p>square ft</p>
+          <br />
+        </div>
+        <div id="start-date-container">
+          <label for="startDate">When would you like to start moving?</label>
+          <br />
+          <input
+            required
+            type="datetime-local"
+            name="startDate"
+            id="startDate"
+          />
+          <br />
+        </div>
+        <div id="move-location-container">
+          <label for="movingLocationContainer"
+            >Where will you be moving to?</label
+          >
+          <br />
+          <div class="move-location-input-container">
+            <label for="moveLocation">City/State</label>
+            <br />
+            <input
+              required
+              type="text"
+              name="moveLocation"
+              id="moveLocation"
+              placeholder="City, State"
+            />
+            <br />
+            <label for="moveLocAddress">Physical Address </label>
+            <br />
+            <input
+              required
+              type="text"
+              name="moveLocAddress"
+              id="moveLocAddress"
+              placeholder="1234 Your Street Name S."
+            />
+          </div>
+        </div>
+        <div id="miscellaneous-container">
+          <label for="miscellaneous"
+            >Do you have any very large, heavy or special objects that need
+            extra attention?
+          </label>
+          <br />
+          <input
+            required
+            type="radio"
+            name="miscellaneous"
+            id="miscellaneous-yes"
+            value="true"
+          />
+          Yes
+          <input
+            checked="true"
+            type="radio"
+            name="miscellaneous"
+            id="miscellaneous-no"
+            value="false"
+          />
+          No
+          <br />
+          <div id="describe-misc-container">
+            <label for="miscDescribe">
+              Describe the items you need moved
+            </label>
+            <br />
+            <textarea
+              name="miscDescribe"
+              id="miscDescribe"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Start of Conditional -->
+        <div id="box-count-container">
+          <label for="boxCount"
+            >Roughly how many boxes would you be using?</label
+          >
+          <br />
+          <input
+            value="0"
+            required
+            type="number"
+            name="boxCount"
+            id="boxCount"
+          />
+          <br />
+          <!-- If a number is chosen then: -->
+          <div id="our-boxes-container">
+            <label for="ourBoxes">Would you like to use our boxes?</label>
+            <br />
+            <input
+              type="radio"
+              name="ourBoxes"
+              id="our-boxes-yes"
+              value="true"
+            />
+            Yes
+            <input
+              checked="true"
+              type="radio"
+              name="ourBoxes"
+              id="our-boxes-no"
+              value="false"
+            />
+            No
+            <br />
+          </div>
+        </div>
+
+        <!-- Start of Conditional -->
+        <div id="garage-container">
+          <label for="garage"
+            >Do you have items in your garage that need to be moved?</label
+          >
+          <br />
+          <input
+            required
+            type="radio"
+            name="garage"
+            id="garage-yes"
+            value="true"
+          />Yes
+          <input
+            checked="true"
+            required
+            type="radio"
+            name="garage"
+            id="garage-no"
+            value="false"
+          />No
+          <br />
+          <!-- If yes: -->
+          <div id="garage-heavy-container">
+            <label for="garageHeavy">Are there any heavy objects?</label>
+            <br />
+            <input
+              required
+              type="radio"
+              name="garageHeavy"
+              id="garage-heavy-yes"
+              value="true"
+            />Yes
+            <input
+              checked="true"
+              required
+              type="radio"
+              name="garageHeavy"
+              id="garage-heavy-no"
+              value="false"
+            />No
+            <br />
+          </div>
+
+          <!-- If yes: -->
+          <div id="explain-container">
+            <label for="explain"
+              >Could you explain in detail what objects need to be moved?</label
+            >
+            <br />
+            <textarea
+              name="explain"
+              id="explain"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <br />
+          </div>
+        </div>
+
+        <button id="submit-btn" type="button">Submit</button>
+        <div id="are-you-sure-container">
+          <div id="are-you-sure">
+            <p>Are you sure you are ready to submit?</p>
+            <button type="submit">Yes</button>
+            <button id="not-ready" type="button">No</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
