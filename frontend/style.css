@@ -242,7 +242,7 @@ label {
   }
   .flex-container {
     flex-direction: column;
-    margin-bottom: -30px;
+    margin-bottom: -20px;
   }
   .flex-container > div {
     width: 100%;
@@ -255,5 +255,9 @@ label {
   }
   form {
     margin: 0;
+  }
+  #tel-container,
+  #email-container {
+    margin-top: 0;
   }
 }

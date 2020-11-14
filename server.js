@@ -2,8 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const url =
-  "mongodb+srv://benzend:dy3r7Yw8sUkNTLk@cluster0.5eyxq.mongodb.net/Cluster0?retryWrites=true&w=majority";
+
 const db = mongoose.connection;
 db.once("open", (_) => {
   console.log("Database connected: ", url);
