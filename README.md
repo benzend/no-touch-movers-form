@@ -1,3 +1,10 @@
-# No Touch Movers Form
+# About
 
-This is a form that sends data to mongodb, using express and mongoose. This form also sends data to an email at the same time.
+This is a form that sends data to a database and also to an email.
+
+# Techstack
+
+- Node.js
+- Plain HTML, CSS and JavaScript
+- MongoDB
+- Mongoose
